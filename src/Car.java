@@ -20,6 +20,8 @@ public class Car {
     }
 
     public void setMake(String make) {
+        // this - refers to the instance that was created when the obj was instantiated
+        // allows us to access fields on the class
         this.make = make;
     }
 
