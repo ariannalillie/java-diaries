@@ -53,15 +53,15 @@ public class Car {
         return convertible;
     }
 
-    public void setConvertible(boolean convertible) {
+    public void setIsConvertible(boolean convertible) {
         this.convertible = convertible;
     }
 
     public void describeCar() {
         System.out.println(doors + "-Door " +
                 color + " " +
-                make + " " +
                 model + " " +
+                make + " " +
                 (convertible ? "Convertible" : ""));
     }
 }
