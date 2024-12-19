@@ -22,7 +22,14 @@ public class Car {
     public void setMake(String make) {
         // this - refers to the instance that was created when the obj was instantiated
         // allows us to access fields on the class
-        this.make = make;
+        if (make == null) make = "Unknown";
+        String lowercaseMake = make.toLowerCase();
+        switch (lowercaseMake) {
+            case "holden", "porsche", "tesla" -> this.make = make;
+            default -> {
+                this.make = "Unsupported";
+            }
+        }
     }
 
     public String getModel() {
