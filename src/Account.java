@@ -7,7 +7,8 @@ public class Account {
     // This constructor has no params - often called the no-args constructor
     // constructors have the same name as the class and no return type
     public Account() {
-    System.out.println("Empty constructor called");
+        this("56777", 350, "Zach");
+        System.out.println("Empty constructor called");
     }
     public Account(String accountNumber, int accountBalance, String customerName) {
         this.accountNumber = accountNumber;
