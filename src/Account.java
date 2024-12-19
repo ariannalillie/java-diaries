@@ -1,13 +1,24 @@
 public class Account {
-    int accountNumber;
+    String accountNumber;
     int accountBalance;
     String customerName;
-
-    public int getAccountNumber() {
+    // If a class contains no constructor declarations
+    // then a constructor is implicitly declared
+    // This constructor has no params - often called the no-args constructor
+    // constructors have the same name as the class and no return type
+    public Account() {
+    System.out.println("Empty constructor called");
+    }
+    public Account(String accountNumber, int accountBalance, String customerName) {
+        this.accountNumber = accountNumber;
+        this.accountBalance = accountBalance;
+        this.customerName = customerName;
+    }
+    public String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
@@ -30,14 +41,14 @@ public class Account {
     public void withdraw(int amount) {
         int newBalance = this.accountBalance - amount;
         if (newBalance > 0) {
-            System.out.println("Your are withdrawing " + amount + "your new balance is $" + newBalance);
+            System.out.println(customerName + ", Your are withdrawing $" + amount + " your new balance is $" + newBalance);
             this.accountBalance = newBalance;
         } else {
-            System.out.println("You do not have enough funds available to withdraw $" + amount);
+            System.out.println(customerName + ", You do not have enough funds available to withdraw $" + amount);
         }
     }
     public void deposit(int amount) {
         this.accountBalance = this.accountBalance + amount;
-        System.out.println("Your new account balance is $" + this.accountBalance);
+        System.out.println(customerName + ", Your new account balance is $" + this.accountBalance);
     }
 }
