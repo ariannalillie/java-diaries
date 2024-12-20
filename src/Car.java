@@ -1,5 +1,5 @@
 // Classes are groups into packages
-// Top level class - A class that is defined in the source codd files
+// Top level class - A class that is defined in the source code files
 // and not enclosed in the code block of another class, type or method
 
 public class Car {
