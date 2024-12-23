@@ -114,3 +114,60 @@ public record Student(String name, int age) {}
 
 *  **Record Header** - everything in parentheses
 * Records do not allow a way to set values other than passing them by into the record header or by use of constructors
+
+# Inheritance
+
+## Key Concepts
+
+### `extends`
+- The `extends` keyword is used to create a subclass that inherits from a superclass.
+- A subclass inherits fields and methods from its parent class.
+- Example:
+```java
+public class Dog extends Animal {
+    // Dog inherits properties and methods from Animal
+}
+```
+
+### Polymorphism
+
+**Polymorphism**: The ability for objects to be treated as instances of their superclass.
+
+- A method that takes a superclass as a parameter can accept instances of its subclasses.
+
+**Key Benefit**
+
+- Enables a single method to handle objects of multiple types.
+
+
+markdown
+Copy code
+### Super Keyword
+
+The `super` keyword is used to refer to the parent class.
+
+Calling the Superclass Constructor
+
+`super()` is used to call the constructor of the superclass from the subclass.
+
+### Overriding Methods
+
+**Overriding**: Redefining a method in a subclass that exists in its superclass.
+
+- The overridden method in the subclass must have the same method signature as in the superclass.
+- Use the `@Override` annotation to indicate a method is overridden.
+
+**Why Override?**
+
+- To provide specific behavior for the subclass.
+
+```java
+@Override
+public void makeNoise() {
+    if (type.equals("Wolf")) {
+        System.out.print("Ow Wooooooo! ");
+    }
+    bark();
+    System.out.println();
+}
+```

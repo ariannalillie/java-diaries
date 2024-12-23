@@ -1,7 +1,9 @@
 package Inheritance;
 
 public class Animal {
-    private String type;
+    // private fields cannot be used by subclasses
+    // protected fields can be used by subclasses
+    protected String type;
     private String size;
     private double weight;
 
