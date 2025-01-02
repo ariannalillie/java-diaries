@@ -171,3 +171,9 @@ public void makeNoise() {
     System.out.println();
 }
 ```
+
+### `this` vs `super`
+* `super` is used to access or call the parent class members (both variables and methods)
+* `this` is used to call the current class members (both variables and methods)
+* **Note:** this is required when we have params with that same name as variable fields
+* These can NOT be used in static methods
